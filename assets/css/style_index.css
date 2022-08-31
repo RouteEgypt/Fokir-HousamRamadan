@@ -1,0 +1,898 @@
+/* ======================== General Css ========================*/
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html 
+{
+    scroll-behavior: smooth;
+}
+.blog-frame
+{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+ul,a
+{
+    text-decoration: none;
+    list-style-type: none;
+}
+.clr
+{
+    clear: both;
+}
+.container
+{
+    width: 80%;
+    margin: auto;
+}
+.lines
+{
+    width: 160px;
+    height: 1px;
+    background-color: #ff305b;
+    margin:1.5rem auto;
+    position: relative;
+}
+.lines::before
+{
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 1px;
+    left: 25%;
+    top: -5px;
+    background-color: red;
+}
+.lines::after
+{
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 1px;
+    left: 25%;
+    top: 5px;
+    background-color: red;
+}
+/* ======================== Start Navbar ========================*/
+header
+{
+    background-color: #333;
+    height: 61px;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+
+}
+nav
+{
+    width: 80%;
+    margin: auto;
+}
+.logo 
+{
+    padding: 18px 0;
+    float: left;
+}
+.logo a
+{
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    Line-height: 25px;
+    color: rgb(255, 48, 91);
+}
+.menu ul li:first-child a
+{
+    color: rgb(255, 48, 91);
+    /* here====================================================================================================================================== */
+}
+.menu
+{
+    float: right;
+    padding: 18px 0;
+}
+.menu ul
+{
+    display: block;
+}
+.menu-mobile i
+{
+    font-size: 22px;
+    color: #fff;
+    float: right;
+}
+.menu-mobile
+{
+    display: none;
+}
+.menu-mobile ul li
+{
+    background-color: #333;
+    width: 100%;
+    text-align: center;
+}
+
+.menu ul li
+{
+    float: left;
+    padding: 0px 10px;
+}
+.menu ul li a
+{
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    padding: 20px 0;
+    transition: all 0.4s ease-in-out 0s;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+}
+.menu ul li a:hover
+{
+    color: rgb(255, 48, 91);
+}
+.menu ul li a:active
+{
+    color: rgb(255, 48, 91);
+}
+/* ======================== End Navbar ========================*/
+
+
+
+/* ======================== Start Home Section ========================*/
+#Home
+{
+    background-image: url(../images/slider/slider-01.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
+.home-overlay
+{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 1px;
+}
+.home-caption
+{
+    text-align: center;
+    color: #fff;
+    margin-top: 50vh;
+}
+.home-caption h3
+{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    Line-height: 26.4px;
+    margin: 0 0 10px;
+}
+.home-caption h1
+{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 70px;
+    font-weight: bold;
+    Line-height: 77px;
+    margin: 0 0 10px;
+    color: rgb(255, 48, 91)
+}
+.home-caption h4
+{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    Line-height: 31.2px;
+    margin: 0 0 10px;
+    text-transform: capitalize;
+}
+.home-caption h4::after
+{
+    content: "designer";
+    animation-name: wordMover;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+@keyframes wordMover
+{
+    0%{content: "designer  |"}
+    3%{content:"designe  |"}
+    6%{content:"design  |"}
+    9%{content:"desig  |"}
+    12%{content:"desi  |"}
+    15%{content:"des  |"}
+    18%{content:"de  |"}
+    21%{content:"d  |"}
+    24%{content:"  |"}
+    27%{content:"d  |"}
+    30%{content:"de  |"}
+    33%{content:"dev  |"}
+    34%{content:"deve  |"}
+    37%{content:"devel  |"}
+    40%{content:"develo  |"}
+    43%{content:"develop  |"}
+    46%{content:"develope  |"}
+    49%{content:"developer  |"}
+    52%{content:"develope  |"}
+    55%{content:"develop  |"}
+    58%{content:"develo  |"}
+    61%{content:"devel  |"}
+    64%{content:"deve  |"}
+    67%{content:"dev  |"}
+    70%{content:"de  |"}
+    73%{content:"d  |"}
+    76%{content:"  |"}
+    79%{content:"d  |"}
+    82%{content:"de  |"}
+    85%{content:"des  |"}
+    88%{content:"desi  |"}
+    91%{content:"desig  |"}
+    94%{content:"design  |"}
+    97%{content:"designe  |"}
+    99%{content:"designer  |"}
+}
+/* ======================== End Home Section ========================*/
+
+
+
+/* ======================== Start About Section ========================*/
+#about
+{
+    padding: 100px 0 125px 0;
+}
+.about-profile
+{
+    float: left;
+    width: 33.33333%;
+    position: relative;
+    box-shadow: 0 0 0 8px #555555;
+    border-radius: 5px;
+    position: relative;
+    margin-left: 8.33333333%;
+}
+
+.profile-overlay
+{
+    background: rgba(0, 0, 0, 0.57) none repeat scroll 0 0;
+    position: absolute;
+    height: 00%;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+    transform: translate(20px,20px);
+}
+.about-profile:hover .profile-overlay {
+    border-radius: 5px;
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.about-profile img
+{
+    width: 100%;
+    border-radius: 5px;
+    transform: translate(20px,20px);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.about-caption
+{
+    float: left;
+    width: 58.33333333%;
+    padding-left: 70px;
+}
+.about-caption h2
+{
+    font-family: 'Source Sans Pro', sans-serif;
+    color:  rgb(51, 51, 51);
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 22px;
+    margin-bottom: 1.5625rem;
+    padding-left: 13px;
+    position: relative;
+    text-transform: uppercase;
+}
+.about-caption h2:before {
+    background-color: #ff305b ;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 4px;
+}
+.about-caption p
+{
+    font-family: 'Roboto', sans-serif;
+    border-bottom: 1px dashed #999999;
+    margin-bottom: 1.5625rem;
+    padding-bottom: 1.5625rem;
+    font-size: 16px;
+    line-height: 25px;
+    color: rgb(85, 85, 85);
+}
+.profile-about ul li
+{
+    font-family: 'Roboto', sans-serif;
+    color: #555555;
+    line-height: 1;
+    margin-bottom: 1.5625rem;
+    white-space: nowrap;
+    float: left;
+    width: 50%;
+
+}
+.profile-about ul li a
+{
+    color: #555555;
+}
+.profile-about span {
+    font-family: 'Roboto', sans-serif;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 500;
+    Line-height: 16px;
+}
+.btn button
+{
+    background-color: #ff305b ;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    padding: 10px 24px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+.btn button:hover
+{
+    background-color: #EC2403;
+}
+.btn button a{
+    color: #fff;
+    font-size: 16px;
+    Line-height: 25px;
+}
+.social-icons
+{
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.social-icons li
+{
+    display: inline-block;
+    padding: 10px;
+}
+.social-icons li a
+{
+    color:#fff;
+    transition: all 0.3s ease 0s;
+}
+.social-icons li a:hover
+{
+    color: rgb(255, 48, 91);
+}
+/* ======================== End About Section ========================*/
+
+
+
+/* ======================== Start Services Section ========================*/
+#services
+{
+    background-color: #F1F1F1;
+    padding: 100px 0 125px 0;
+}
+.services-heading
+{
+    text-align: center;
+}
+.services-heading h2
+{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 30px;
+    color: rgb(51, 51, 51);
+}
+.services-cart
+{
+    text-align: center;
+    float: left;
+    width: 25%;
+    transition: all 0.3s ease-in-out 0s;
+    padding: 20px;
+}
+.services-cart:hover
+{
+    background-color: #fff;
+  -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+.services-cart i
+{
+    color: #ff305b;
+    display: block;
+    font-size: 36px;
+    margin-bottom: 1.25rem;
+    transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+}
+.services-cart:hover i
+{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.services-cart h3
+{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.services-cart p
+{
+    font-family: 'Roboto', sans-serif;
+    line-height: 25px;
+    color: rgb(85, 85, 85)
+}
+/* ======================== End Services Section ========================*/
+
+
+
+/* ======================== Start portfolio Section ========================*/
+#portfolio
+{
+        padding: 100px 0 125px 0;
+}
+.portfolio-heading
+{
+    text-align: center;
+}
+.portfolio-heading h2
+{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 30px;
+    color: rgb(51, 51, 51);
+}
+.portfolio-links
+{
+    text-align: center;
+}
+.portfolio-links button
+{
+    background-color: white;
+    border: none;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding: 3px 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.portfolio-links button:first-child
+{
+    color: #ff305b;
+}
+.portfolio-box
+{
+    margin-top: 3.125rem;
+}
+.portfolio-cart
+{
+    float: left;
+    width: 33.333333%;
+    padding: 0 10px;
+}
+.portfolio-overlay
+{
+    position: relative;
+    margin-bottom: 1.875rem;
+}
+
+.portfolio-overlay 
+{
+    position: relative;
+    transition: all 0.3s ease 0s;
+}
+.portfolio-overlay img
+{
+   width: 100%;
+}
+.pro-over
+{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease 0s;
+}
+.pro-icon
+{
+    position: absolute;
+    bottom: 15px;
+    color: #ff305b;
+    font-size: 20px;
+    right: 15px;
+    transition: all 0.4s ease 0s;
+    visibility: hidden;
+    opacity: 0;
+}
+.portfolio-overlay:hover .pro-icon , .portfolio-overlay:hover .pro-over
+{
+    visibility: visible;
+    opacity: 1;
+}
+/* ======================== End Portfolio Section ========================*/
+
+
+
+/* ======================== Start Counter Section ========================*/
+#counter
+{
+    background-color: #F1F1F1;
+    padding: 100px 0 100px 0;
+}
+.counter-box
+{
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+.counter-box i 
+{
+    font-size: 26px;
+    line-height: 26px;
+    color: rgb(255, 48, 91);
+}
+.counter-box h5
+{
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 29.6px;
+    color: rgb(51, 51, 51);
+    margin: 15px 0 10px;
+}
+.counter-box h3
+{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 17.6px;
+    color: rgb(85, 85, 85);
+    font-family: 'Source Sans Pro', sans-serif;
+}
+/* ======================== End Counter Section ========================*/
+
+
+
+/* ======================== Start Feed Section ========================*/
+#feed
+{
+    padding: 100px 0 100px 0;
+}
+.feed-heading
+{
+    text-align: center;
+}
+.feed-heading h2
+{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 30px;
+    color: rgb(51, 51, 51);
+}
+.feed-box
+{
+    background: #f1f1f1 none repeat scroll 0 0;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 40px;
+    position: relative;
+    width: 70%;
+    margin: auto;
+}
+.feed-box::after
+{
+    border-color: #ff305b rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+    border-image: none;
+    border-style: solid;
+    border-width: 220px;
+    content: "";
+    height: 72px;
+    left: -350px;
+    position: absolute;
+    top: 0;
+    width: 177px;
+    z-index: 1;
+    transform: translateX(-10%);
+    -webkit-transform: translateX(-10%);
+    -moz-transform: translateX(-10%);
+    -ms-transform: translateX(-10%);
+    -o-transform: translateX(-10%);
+}
+.feed-photo
+{
+    border-radius: 50%;
+    margin: 12px auto;
+    overflow: hidden;
+    position: relative;
+    width: 110px;
+    z-index: 999;
+    float: left;
+    width: 15%;
+}
+
+.feed-photo img
+{
+    width: 100%;
+}
+.feed-content
+{
+    float: left;
+    width: 85%;
+    padding-left: 50px;
+}
+.feed-content h3
+{
+    font-size: 26px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    margin: 0 0 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #333;
+}
+.feed-content h4
+{
+    font-weight: 600;
+    margin: 0 0 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #333;
+}
+.feed-content h4 a
+{
+    font-weight: 600;
+    margin: 0 0 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #333;
+}
+.feed-content p
+{
+    font-size: 16px;
+    font-style: italic;
+}
+.stars
+{
+    color: #f1c30d;
+    margin-bottom: 12px;
+    margin-top: 1.875rem;
+}
+/* ======================== End Feed Section ========================*/
+
+
+
+/* ======================== Start Blog Section ========================*/
+#blog
+{
+    background-color: #F1F1F1;
+    padding: 100px 0 100px 0;
+    
+}
+.blog-heading
+{
+    text-align: center;
+}
+.blog-heading h2
+{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 30px;
+    color: rgb(51, 51, 51);
+}
+.blog-cart
+{
+    float: left;
+    width: 33.33333%;
+    padding: 15px;
+}
+.blog-cart-photo img
+{
+    width: 100%;
+}
+.blog-content
+{
+    padding: 10px;
+    background-color: #fff;
+}
+.blog-content p
+{
+    color: rgb(85, 85, 85);
+    Line-height: 30px;
+    font-size: 20px;
+}
+.blog-content h3
+{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    Line-height: 26.4px;
+    color: #333333;
+    margin: 15px 0 ;
+    transition: all 0.3s ease 0s;
+}
+.blog-content a
+{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: rgb(33, 33, 33);
+    Line-height: 35px;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    font-size: 20px;
+}
+.blog-content h3:hover
+{
+    color: #ff305b;
+}
+.blog-content a:hover
+{
+    color: #ff305b;
+}
+.blog-frame iframe
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+/* ======================== End Blog Section ========================*/
+
+
+
+/* ======================== Start Contact Section ========================*/
+#contact
+{
+    padding: 100px 0 100px 0;
+}
+.contact-heading
+{
+    text-align: center;
+}
+.contact-heading h2
+{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 30px;
+    color: rgb(51, 51, 51);
+}
+.contact-form
+{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+.contact-form input
+{
+    height: 40px;
+}
+.form-control
+{
+    float: left;
+    width: 100%;
+    padding: 6px 12px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    font-family: 'Source Sans Pro', sans-serif;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.w-50
+{
+    width: 48%;
+    float: right;
+}
+.w-l
+{
+    float: left;
+}
+.form-btn
+{
+    width: 25%;
+    background-color: #ff305b;
+    border-color: #ff305b;
+    color: #fff;
+    padding: 0 20px;
+    font-size: 16px;
+    height: 40px;
+    line-height: 38px;
+    text-transform: uppercase;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.form-btn:hover
+{
+    background-color: #EC2403;
+}
+/* ======================== End Contact Section ========================*/
+
+
+
+/* ======================== Start Footer Section ========================*/
+#footer
+{
+    background-color: #333;
+    padding: 40px 0;
+    text-align: center;
+}
+.footer-social
+{
+    margin-bottom: 10px;
+}
+.footer-social li
+{
+    display: inline-block;
+    padding: 10px;
+}
+.footer-social li a
+{
+    color:#fff;
+    transition: all 0.3s ease 0s;
+}
+.footer-social li a:hover
+{
+    color: rgb(255, 48, 91);
+}
+.copyRight
+{
+    color:#fff;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.copyRight a
+{
+    color: rgb(255, 48, 91);
+    font-weight: 700;
+}
+.copyRight a:hover
+{
+    text-decoration: underline;
+}
+/* ======================== End Footer Section ========================*/
